@@ -5,14 +5,16 @@ const cors = require('cors');
 const pinoLogger = require('./logger');
 
 const connectToDatabase = require('./models/db');
-const {loadData} = require("./util/import-mongo/index");
+const { loadData } = require("./util/import-mongo/index");
 
 
 const app = express();
-app.use("*",cors());
+app.use("*", cors());
 const port = 3060;
+const giftRoutes = require('./routes/giftRoutes');
 const authRoutes = require('./routes/authRoutes');
 app.use('/api/auth', authRoutes);
+
 
 
 
@@ -52,10 +54,10 @@ app.use((err, req, res, next) => {
     res.status(500).send('Internal Server Error');
 });
 
-app.get("/",(req,res)=>{
+app.get("/", (req, res) => {
     res.send("Inside the server")
 })
-
+app.use('/api/gifts', giftRoutes);
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
