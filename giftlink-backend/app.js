@@ -9,6 +9,7 @@ const { loadData } = require("./util/import-mongo/index");
 
 
 const app = express();
+app.use(express.json());
 app.use("*", cors());
 const port = 3060;
 const giftRoutes = require('./routes/giftRoutes');
