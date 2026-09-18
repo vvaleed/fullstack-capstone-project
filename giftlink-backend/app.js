@@ -13,6 +13,8 @@ app.use("*", cors());
 const port = 3060;
 const giftRoutes = require('./routes/giftRoutes');
 const authRoutes = require('./routes/authRoutes');
+const searchRoutes = require('./routes/searchRoutes');
+
 app.use('/api/auth', authRoutes);
 
 
@@ -58,6 +60,7 @@ app.get("/", (req, res) => {
     res.send("Inside the server")
 })
 app.use('/api/gifts', giftRoutes);
+app.use('/api/search', searchRoutes);
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
