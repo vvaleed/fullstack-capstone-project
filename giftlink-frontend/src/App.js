@@ -5,6 +5,8 @@ import LoginPage from './components/LoginPage/LoginPage';
 import DetailsPage from './components/DetailsPage/DetailsPage';
 
 import RegisterPage from './components/RegisterPage/RegisterPage';
+import SearchPage from './components/SearchPage/SearchPage';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
@@ -21,6 +23,8 @@ function App() {
           <Route path="/app/login" element={<LoginPage/>} />
           <Route path="/app/register" element={<RegisterPage />} />
           <Route path="/app/product/:productId" element={<DetailsPage/>} />
+          <Route path="/app/search" element={<SearchPage/>} />
+
 
         </Routes>
         </>
