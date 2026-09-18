@@ -58,8 +58,8 @@ app.use((err, req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("Inside the server")
-})
+    res.send("Inside the server");
+});
 app.use('/api/gifts', giftRoutes);
 app.use('/api/search', searchRoutes);
 app.listen(port, () => {
