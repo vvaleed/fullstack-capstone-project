@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 
 import './RegisterPage.css';
-    const [firstName, setFirstName] = useState('');
+  
+
+
+function RegisterPage() {
+
+    //insert code here to create useState hook variables for firstName, lastName, email, password
+  const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
         const handleRegister = async () => {
 		console.log("Register invoked")
 	}
-
-
-function RegisterPage() {
-
-    //insert code here to create useState hook variables for firstName, lastName, email, password
-
     // insert code here to create handleRegister function and include console.log
 
          return (
